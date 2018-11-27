@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ICIoT - International Conference on IoT</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 11, 2019 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "days : " + hours + "hrs : "
+        + minutes + "min : " + seconds + "sec";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+
+<style>
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  
+  .button2 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+      <div class="container">
+  
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <h1><a href="index.html"><img src="img/logo.png" alt="" title="" style="height:70px; width:90px"><span>ICIoT-2019</span></a></h1>
+         
+        </div>
+  
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Committees</a></li>
+                <li><a href="index.html#speakers">Speakers</a></li>
+                <li class="menu-active"><a href="schedule.html">Schedule</a></li>
+                <li><a href="publications.html">Call For Papers</a></li>
+                <li><a href="index.html#venue">Venue</a></li>
+                <li><a href="register.html">Registration</a></li>        
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header><!-- #header -->
+    
+      <section id="intro">
+            <div class="intro-container wow fadeIn">
+              <h1 class="mb-4 pb-0">Important Dates and Schedule</h1>
+              <p class="mb-4 pb-0">March 11-15, SRM Institute of Science and Technology</p>
+              <p id="demo" style="color:#c69a15; background-color:white"></p>
+              <a href="schedule.html#important" class="about-btn scrollto"><b>Important Dates</b></a> <a href="publications.html#publications" class="about-btn scrollto"><b>Publications</b></a>
+      <i class="fa fa-caret-down" style="color:#c69a15; font-size: 50px;"></i>
+            </div>
+          </section>
+        
+    <main id="main">
+<!--==========================
+      Schedule Section
+    ============================-->
+    <section id="schedule" class="section-with-bg">
+            <div class="container wow fadeInUp">
+              <div class="section-header">
+                <h2>Event Schedule</h2>
+                <p>Here is the conference schedule</p>
+              </div>
+      
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Day 3</a>
+                </li><br><br>
+                <li class="nav-item">
+                    <a class="nav-link" href="#day-4" role="tab" data-toggle="tab">Day 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#day-5" role="tab" data-toggle="tab">Day 5</a>
+                </li>
+              </ul>
+      
+              <h3 class="sub-heading">Tentative event programs</h3>
+      
+              <div class="tab-content row justify-content-center">
+      
+                <!-- Schdule Day 1 -->
+                <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+      
+                        <div class="row schedule-item">
+                                <div class="col-md-4"><time>8.00 A.M - 9.30 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Registration</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.30 A.M – 10.15 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Inauguration</h4>
+                                  
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>10.15 A.M – 11.00 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Plenary Talk</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>11.00 A.M - 11.15 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                </div>
+                              </div>  
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>11.15 A.M - 12.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Paper Presentations</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>12.45 P.M - 1.15 P.M </time></div>
+                                <div class="col-md-8">
+                                  <h4>Lunch</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.15 P.M – 2.00 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Invited Talk</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                  <div class="col-md-4"><time>2.00 P.M – 3.30 P.M</time></div>
+                                  <div class="col-md-8">
+                                    <h4>Paper Presentations</h4>
+                                  </div>
+                              </div>
+                  
+                                <div class="row schedule-item">
+                                    <div class="col-md-4"><time>3.30 P.M - 3.45 P.M</time></div>
+                                      <div class="col-md-8">
+                                        <h4>Tea Break</h4>
+                                    </div>
+                            </div>
+                                
+                            <div class="row schedule-item">
+                                   <div class="col-md-4"><time>3.45 P.M - 4.30 P.M</time></div>
+                                     <div class="col-md-8">
+                                          <h4>Paper Presentations</h4>
+                                </div>
+                            </div>
+      
+                </div>
+                <!-- End Schdule Day 1 -->
+      
+                <!-- Schdule Day 2 -->
+                <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+      
+                        <div class="row schedule-item">
+                                <div class="col-md-4"><time>8.00 A.M - 9.45 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Plenary Talk </h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.45 A.M - 10.00 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                  
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>10.00 A.M – 11.30 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Paper Presentations</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>11.30 A.M - 12.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Poster Presentations</h4>
+                                </div>
+                              </div>  
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>12.45 P.M - 1.15 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Lunch</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.15 P.M – 2.00 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Invited Talk</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>2.00 P.M – 3.30 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Paper Presentations</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                  <div class="col-md-4"><time>3.30 P.M - 3.45 P.M</time></div>
+                                  <div class="col-md-8">
+                                    <h4>Tea Break</h4>
+                                  </div>
+                              </div>
+                  
+                                <div class="row schedule-item">
+                                    <div class="col-md-4"><time>3.45 P.M - 4.30 P.M</time></div>
+                                      <div class="col-md-8">
+                                        <h4>Paper Presentations</h4>
+                                    </div>
+                            </div>
+
+                </div>
+                <!-- End Schdule Day 2 -->
+
+    
+                <!-- Schdule Day 3 -->
+                <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+                        <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.00 A.M – 9.45 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Plenary Talk</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.45 A.M - 10.00 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                  
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>10.00 A.M – 12.30 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Paper Presentations</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>12.30 P.M - 1.00 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Lunch</h4>
+                                </div>
+                              </div>  
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.00 P.M – 1.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Plenary Talk</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.45 P.M – 3.30 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Paper Presentations</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>3.30 P.M - 3.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                  <div class="col-md-4"><time>3.45 P.M - 4.30 P.M</time></div>
+                                  <div class="col-md-8">
+                                    <h4>Paper Presentations</h4>
+                                  </div>
+                              </div>
+                </div>
+                <!-- End Schdule Day 2 -->
+                 <!-- Schdule Day 3 -->
+                 <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-4">
+                        <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.00 A.M - 9.45 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Invited  Talk </h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.45 A.M – 10.00 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                  
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>10.00 A.M – 11.30 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Success stories of Startups from Technical perspective –
+                                    Panel Discussion | Paper Presentation (Parallel)</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>11.30 A.M - 12.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Presentations & Demonstrations by Startups | Paper Presentation (Parallel)</h4>
+                                </div>
+                              </div>  
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>12.45 P.M - 1.15 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Lunch</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.15 P.M - 2.00 P.M </time></div>
+                                <div class="col-md-8">
+                                  <h4>Invited Talk</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>2.00 P.M – 3.30 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Success stories of Startups from Technical perspective –
+                                    Panel Discussion | Paper Presentation (Parallel)</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                  <div class="col-md-4"><time>3.30 P.M – 3.45 P.M</time></div>
+                                  <div class="col-md-8">
+                                    <h4>Tea Break</h4>
+                                  </div>
+                              </div>
+                  
+                                <div class="row schedule-item">
+                                    <div class="col-md-4"><time>3.45 P.M - 4.30 P.M</time></div>
+                                      <div class="col-md-8">
+                                        <h4>Presentations & Demonstrations by Startups | Paper Presentation (Parallel)</h4>
+                                    </div>
+                            </div>
+                                
+                            
+                </div>
+                <!-- End Schdule Day 2 -->
+                 <!-- Schdule Day 3 -->
+                 <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-5">
+                        <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.00 A.M  – 9.45 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Plenary Talk</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>9.45 A.M  -  10.00 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tea Break</h4>
+                                  
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>10.00 A.M – 11.30 A.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>IoT enabled Smart Cities – 
+                                    Panel Discussion | Paper Presentation (Parallel Session)</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>11.30 A.M - 12.45 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Tech Talk</h4>
+                                </div>
+                              </div>  
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>12.45 P.M  - 1.30 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Lunch</h4>
+                                </div>
+                              </div>
+                  
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>1.30 P.M - 2.15 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Invited Talk</h4>
+                                </div>
+                              </div>
+                              
+                              <div class="row schedule-item">
+                                <div class="col-md-4"><time>2.30 P.M  - 3.30 P.M</time></div>
+                                <div class="col-md-8">
+                                  <h4>Valedictory Function</h4>
+                                </div>
+                              </div>
+                  
+                             
+                </div>
+                <!-- End Schdule Day 2 -->                  
+              </div>
+      
+            </div>
+      
+          </section>
+
+ <section id="important" class="section-with-bg">
+            <div class="container wow fadeInUp">
+                <div class="section-header">
+                     <h2>Important Dates</h2>
+                     <p>Here are some Important Dates</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-12" style="text-align: center">
+                <h4>Last date for Paper submission->06.02.19</h4>
+                <h4>Acceptance Notification->14.02.19</h4>
+                <h4>Camera Ready Submission->20.02.19</h4>
+                <h4>Last date for Registration->25.02.19</h4>
+                </div>
+            </div>
+</section>
+
+<!--==========================
+      F.A.Q Section
+    ============================-->
+    <section id="faq" class="wow fadeInUp">
+
+            <div class="container">
+      
+              <div class="section-header">
+                <h2>F.A.Q </h2>
+              </div>
+      
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <ul id="faq-list">
+      
+                      <li>
+                        <a data-toggle="collapse" class="collapsed" href="#faq1">When will the conference take place? Where is it located?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq1" class="collapse" data-parent="#faq-list">
+                          <p>
+                           The ICIoT-2019 conference will take place on March 11-15, 2019 at SRM Institutes of Science and Technology in Chennai, India.</p>
+                        </div>
+                      </li>
+            
+                      <li>
+                        <a data-toggle="collapse" href="#faq2" class="collapsed">How can I register? What are the registration rates?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq2" class="collapse" data-parent="#faq-list">
+                          <p>
+                            For conference registration and other details regarding registration, visit: <a href="register.html">Registration Page</a></p>
+                        </div>
+                      </li>
+            
+                      <li>
+                        <a data-toggle="collapse" href="#faq3" class="collapsed">Is the conference schedule available?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq3" class="collapse" data-parent="#faq-list">
+                          <p>
+                            Yes. Full 5-Day conference scedule can be found out at-<a href="schedule.html">Conference Schedule</a></p>
+                        </div>
+                      </li>
+            
+                      <li>
+                        <a data-toggle="collapse" href="#faq4" class="collapsed">I want to contact conference authorities, how can I do so?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq4" class="collapse" data-parent="#faq-list">
+                          <p>
+                            You're welcome to contact us regarding any information. Please visit: <a href="index.html#contact">Contact Us</a> for contact information.</p>
+                        </div>
+                      </li>
+            
+                      <li>
+                        <a data-toggle="collapse" href="#faq5" class="collapsed">What are the topic of interests for the conference?<i class="fa fa-minus-circle"></i></a>
+                        <div id="faq5" class="collapse" data-parent="#faq-list">
+                          <p>
+                            Topic of Interests can be looked up on at- <a href="publications.html"> Topic of Interests</a></p>
+                        </div>
+                      </li>
+            
+                      
+                    </ul>
+                </div>
+              </div>
+      
+            </div>
+      
+          </section>
+      
+</main>
+  <!--==========================
+    Footer
+  ============================-->
+
+  <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Downloads</h4>
+                  <p><a href="img/Registartion_Form-ICIot-2019.docx" download>Registration Form</a><br>
+                    <a href="img/copyright_form-ICIOT2019.docx" download>Copyright Declaration Form</a></p>
+              </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Academia</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/">SRM IST</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/engineering/department-of-computer-science-engineering/about-the-department">Computer Science Department</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="schedule.html">Important Dates</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="schedule.html#faq">FAQs</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="publications.html#speakers">Publications</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="register.html#buy-tickets">Fee Section</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                  The Organising Secretary<br>
+                  ICIoT- ‘19<br>
+                  Department of CSE,<br>
+                  SRMIST,<br>
+                  Kattankulathur-603203<br>
+                <strong>Phone:</strong> 044-274-17820<br>
+                <strong>Email:</strong> iciot.2019@ktr.srmuniv.ac.in<br>
+              </p>
+  
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+  
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+  
+  </html>
