@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Committees-ICIoT</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 11, 2019 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "days : " + hours + "hrs : "
+        + minutes + "min : " + seconds + "sec";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+
+<style>
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  
+  .button2 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+  </style>
+
+<style>
+    .card {
+        box-shadow: 0 16px 16px 0 rgba(6, 12, 34, 0.9);
+        transition: 0.3s;
+        width: 40%;
+        margin-bottom: 30px;
+        margin-left: auto;
+        border: 2px solid rgba(6, 12, 34, 0.9);
+  margin-right: auto;
+    }
+    .card p
+    {
+    padding: 2px 16px;
+    }
+    .card:hover {
+        box-shadow: 0 18px 16px 0 #c69a15;
+        border: 2px solid #c69a15;
+    }
+    
+    .container1 {
+    background-color:#c69a15;
+        padding: 2px 16px;
+
+    }
+    </style>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+      <div class="container">
+  
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <h1><a href="index.html"><img src="img/logo.png" alt="" title="" style="height:70px; width:90px"><span>ICIoT-2019</span></a></h1>
+         
+        </div>
+  
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="menu-active"><a href="about.html">Committees</a></li>
+                <li><a href="index.html#speakers">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="publications.html">Call For Papers</a></li>
+                <li><a href="index.html#venue">Venue</a></li>
+                <li><a href="register.html">Registration</a></li>        
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header><!-- #header -->
+  
+  <!-- #header -->
+
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">Committees</h1>
+      <p class="mb-4 pb-0">Committees Involved in the conduction of the conference.</p>
+      <p id="demo" style="color:#c69a15; background-color:white"></p>
+      <a href="schedule.html#important" class="about-btn scrollto"><b>Important Dates</b></a><a href="publications.html#publications" class="about-btn scrollto"><b>Publications</b></a>
+      <i class="fa fa-caret-down" style="color:#c69a15; font-size: 50px;"></i>
+    </div>
+  </section>
+
+  <main id="main">
+    <br>
+    <br>
+    <section id="patron" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Patrons</h2>
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-md-6" style="margin:auto;">
+                  <div class="card" style="height:350px; width:300px;">
+                      <div class="container1">
+                        <h4 style="text-align:center"><b>Chief Patron</b></h4> 
+                      </div>
+                      <p>->Dr. T. R. Paari Vendhar, Chancellor, SRMIST, India<br><br>
+                        ->Mr. Ravi Pachamoothoo, Chairman, SRM Group, India<br><br>
+                        ->Mr. P. Sathyanarayanan, President, SRMIST, India<br><br>
+                        ->Dr. R. Shivakumar, Vice President, SRMIST, India</p>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6" style="margin:auto;">
+                <div class="card" style="height:350px; width:300px;">
+                    <div class="container1">
+                      <h4 style="text-align:center"><b>Patron</b></h4> 
+                    </div>
+                    <p>->Dr. Sandeep Sancheti, Vice Chancellor, SRMIST, India<br><br>
+                      ->Dr. T. P. Ganesan, Pro-Vice Chancellor, SRMIST, India<br><br>
+                      ->Dr. C. Muthamizhchelvan, Director (Engg&Tech), SRMIST, India<br><br>
+                      ->Dr. D. Narayana Rao, Director (Research), SRMIST, India<br></p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<br>
+<br>
+<section id="patron" class="wow fadeInUp">
+    <div class="container">
+      <div class="section-header">
+        <h2>Advisory Committee</h2>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-6" style="margin:auto;">
+              <div class="card" style="height:350px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b></b></h4> 
+                  </div>
+                  <p></p>
+                </div>
+          </div>
+
+    </div>
+  </section>
+
+<br>
+<br>
+      <section id="oc" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Organising Committee</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>General Chair</b></h4> 
+                  </div>
+                  <p>->Dr. B. Amutha, Professor & Head, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Technical Programme Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. M. Pushpalatha, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>International Speakers Coordination Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. Revathi Venkataraman, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Web Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. E.Poovammal, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Publication Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. C.Malathy, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Publicity Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. S.Prabakaran, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Registration Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. D.Malathy, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Startups and Government Delegates Coordination Chair</b></h4> 
+                  </div>
+                  <p>->Dr. S.S.Sridhar, Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Finance Committee Chair</b></h4> 
+                  </div>
+                  <p>->Dr. A.Jeyasekar, Associate Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin:auto;">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                    <h4 style="text-align:center"><b>Organizing Secretary</b></h4> 
+                  </div>
+                  <p>->Dr. Annapoorani Panaiyappan, Associate Professor, Department of Computer Science and Engineering</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" style="margin:auto;">
+                <div class="card" style="height:250px; width:300px;">
+                    <div class="container1">
+                      <h4 style="text-align:center"><b>Conference Tour Chommittee</b></h4> 
+                    </div>
+                    <p>->Dr.M. Vijayakumaran, Associate Professor, Department of Computer Science and Engineering</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6" style="margin:auto;">
+                  <div class="card" style="height:250px; width:300px;">
+                      <div class="container1">
+                        <h4 style="text-align:center"><b>Hospitality Committee</b></h4> 
+                      </div>
+                      <p>->Mr. M. Eliazer, Assistant Professor, Department of Computer Science and Engineering
+                        <br>->Mr. C. Rajesh Babu, Assistant Professor, Department of Computer Science and Engineering
+                      </p>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </section>
+<br>
+<br>
+
+      <section id="patron" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Technical Committee</h2>
+          </div>
+          
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. Andrea Fenovcikova</b><br>
+                    Department of Applied Mathematics and Informatics,<br> Technical University in Košice, Slovakia.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. V.S. Felix Enigo</b><br>
+                    Associate Professor<br>
+                    Department of Computer Science & Engineering
+                    SSN College of Engineering<br>
+                    Kalavakkam - 603 110
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. J.M. Gnanasekar</b><br>
+                    Department of Computer Science,<br>
+                    Sri Venkateswara College of Engineering<br>
+                    Pennalur - 602 117,<br>
+                    Kancheepuram Dt.<br>
+                    Tamil Nadu<br>India
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. Henry Adorna</b><br>
+                    Professor<br>
+                    Theoretical Computer Science,<br>
+                    University of the Philippines Diliman Philippines  
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. Hamid Al-Hamadi</b><br>
+                    Assistant Professor<br>
+                    Kuwait University<br>
+                    College of Computing Sciences and Engineering<br>
+                    Computer Science Department,  Safat -13060     
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. P. K. Paul,</b><br>
+                    Executive Director, MCIS<br>
+                    Dept. of computer and Information Science
+                    Rajganj university, (a State university), West Bengal.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr.S.Parasuraman</b><br>
+                    School of Engineering,<br>
+                    Monash University Sunway Campus,<br>
+                    Jalan Lagoon Selatan,<br>
+                    Bandar Sunway, Selangor, Malaysia.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1"> 
+                  </div>
+                  <p><b>Dr.Noor Mohammad SK</b><br>
+                    Assiatant Professor<br>
+                    Department of CSE<br>
+                    Indian Institute of Information Technology, Design & Manufacturing (IIIT D&M)<br>
+                    Kancheepuram, Chennai – 600127
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr.P.Uma Maheswari</b><br>
+                    Associate Professor,<br>
+                    Department of Computer Science & Engineering,<br>
+                    College of Engineering, Guindy Campus,<br>
+                    Anna University, Chennai - 600 025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. T. T. Mirnalinee</b><br>
+                    Professor,<br>
+                    Department of Computer Science & Engineering,<br>
+                    SSN College of Engineering<br>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. A. Amuthan</b><br>
+                    Professor & Associate Dean<br>
+                    Pondicherry Engineering College.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr.S.Nickolas</b><br>
+                    Professor,<br>
+                    Department of Computer Applications<br>National Institute of Technology<br>Tiruchirappalli - 620 015
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>  
+                <p><b>Dr.N.Bhalaji</b><br>
+                    Associate Professor,<br>
+                     Department of IT<br>SSN College of Engineering, Chennai, India
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="card" style="height:250px; width:300px;">
+                  <div class="container1">
+                  </div>
+                  <p><b>Dr. S Srinivasan</b><br>
+                    Professor & Head,<br>
+                    DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING<br>Anna University, Madurai</p>
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+    </main>
+
+
+    <!--==========================
+      Footer
+    ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Downloads</h4>
+                    <p><a href="img/Registartion_Form-ICIot-2019.docx" download>Registration Form</a><br>
+                      <a href="img/copyright_form-ICIOT2019.docx" download>Copyright Declaration Form</a></p>
+                </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Academia</h4>
+                <ul>
+                  <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/">SRM IST</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/engineering/department-of-computer-science-engineering/about-the-department">Computer Science Department</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="fa fa-angle-right"></i> <a href="schedule.html">Important Dates</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="schedule.html#faq">FAQs</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="publications.html#speakers">Publications</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="register.html#buy-tickets">Fee Section</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h4>Contact Us</h4>
+                <p>
+                    The Organising Secretary<br>
+                    ICIoT- ‘19<br>
+                    Department of CSE,<br>
+                    SRMIST,<br>
+                    Kattankulathur-603203<br>
+                  <strong>Phone:</strong> 044-274-17820<br>
+                  <strong>Email:</strong> iciot.2019@ktr.srmuniv.ac.in<br>
+                </p>
+    
+                <div class="social-links">
+                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+    
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    
+      <!-- JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/jquery/jquery-migrate.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/superfish/hoverIntent.js"></script>
+      <script src="lib/superfish/superfish.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/venobox/venobox.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+      <!-- Contact Form JavaScript File -->
+      <script src="contactform/contactform.js"></script>
+    
+      <!-- Template Main Javascript File -->
+      <script src="js/main.js"></script>
+    </body>
+    
+    </html>

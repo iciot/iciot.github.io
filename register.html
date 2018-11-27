@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+        body {margin:0;font-family:Arial}
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .active {
+          background-color: #4CAF50;
+          color: white;
+        }
+        
+        .topnav .icon {
+          display: none;
+        }
+        
+
+        
+        .dropdown .dropbtn {
+            font-size: 17px;    
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .topnav a:hover, .dropdown:hover .dropbtn {
+          background-color: #555;
+          color: white;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+          }
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          .topnav.responsive .dropdown {float: none;}
+          .topnav.responsive .dropdown-content {position: relative;}
+          .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+        }
+        </style>
+  <meta charset="utf-8">
+  <title>ICIoT - International Conference on IoT</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 11, 2019 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "days : " + hours + "hrs : "
+        + minutes + "min : " + seconds + "sec";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+
+<style>
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  
+  .button2 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="index.html"><img src="img/logo.png" alt="" title="" style="height:70px; width:90px"><span>ICIoT-2019</span></a></h1>
+       
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Committees</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="publications.html">Call For Papers</a></li>
+          <li><a href="index.html#venue">Venue</a></li>
+          <li class="menu-active"><a href="register.html">Registration</a></li>        
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">Registration</h1>
+      <p class="mb-4 pb-0"></p>
+      <p id="demo" style="color:#c69a15; background-color:white"></p>
+      <a href="schedule.html#important" class="about-btn scrollto"><b>Important Dates</b></a> <a href="publications.html#publications" class="about-btn scrollto"><b>Publications</b></a>
+      <i class="fa fa-caret-down" style="color:#c69a15; font-size: 50px;"></i>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      Buy Ticket Section
+    ============================-->
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+
+        <div class="container">
+            <div class="section-header">
+              <h2>Registration Information</h2>
+              <p>Registration General Details</p>
+            </div>
+    
+            <div class="row">
+              <div class="col-12 col-lg-12">
+              <p>
+
+
+    • Authors must complete the registration process before uploading the camera-ready version of their paper.<br><br>
+    • One registration may cover 1 paper of which the registrant is co-author.<br><br>
+    • Every attending author and co-author is required to register separately. Please note that one registration only allows attendance for that one registrant.<br><br>
+    • For registration, accepted authors are required to use the same e-mail address that was used for submitting the paper.<br><br>
+    • At least one full (i.e., non-student) registration is required to upload a camera ready paper. If all the authors of an accepted paper are students, at least one author must register at a non-student rate.<br><br><br>
+ 
+    • REGISTRATION FEE INCLUDES:<br>
+        ◦ Participation in all technical sessions of the conference program;<br>
+        ◦ All meals during the course of the conference;<br>
+        ◦ Conference accessories;<br>
+        ◦ Conference Soft Proceedings;<br>
+              </p>
+            </div>
+            </div>
+    
+    
+          </div>
+
+          <div class="container">
+              <div class="section-header">
+                <h2>Registration Fee</h2>
+                <p>Please find below the detailed registration fee</p>
+              </div>
+      
+              <div class="row">
+                <div class="col-12 col-lg-12">
+                <p>
+                    <b>Conference Fee</b><br>
+                    Scholar/Students-Rs.2000/-<br>
+Faculty- Rs.3000/-<br>
+Industry-Rs.4000/-<br><br>
+<b>Publication Fee</b>-TBA
+                </p>
+                <h2><a href="img/Registartion_Form-ICIot-2019.docx" download>Click Here To Download Registration Form</a></h2>
+                <h2><a href="img/copyright_form-ICIOT2019.docx" download>Click Here To Download The Copyright Declaration Form</a></h2>
+              </div>
+              </div>
+      
+      
+            </div>
+          </section>
+
+
+
+    </main>
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Downloads</h4>
+                    <p><a href="img/Registartion_Form-ICIot-2019.docx" download>Registration Form</a><br>
+                      <a href="img/copyright_form-ICIOT2019.docx" download>Copyright Declaration Form</a></p>
+                </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Academia</h4>
+                <ul>
+                  <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/">SRM IST</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/engineering/department-of-computer-science-engineering/about-the-department">Computer Science Department</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="fa fa-angle-right"></i> <a href="schedule.html">Important Dates</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="schedule.html#faq">FAQs</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="publications.html#speakers">Publications</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="register.html#buy-tickets">Fee Section</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h4>Contact Us</h4>
+                <p>
+                    The Organising Secretary<br>
+                    ICIoT- ‘19<br>
+                    Department of CSE,<br>
+                    SRMIST,<br>
+                    Kattankulathur-603203<br>
+                  <strong>Phone:</strong> 044-274-17820<br>
+                  <strong>Email:</strong> iciot.2019@ktr.srmuniv.ac.in<br>
+                </p>
+    
+                <div class="social-links">
+                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+    
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    
+      <!-- JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/jquery/jquery-migrate.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/superfish/hoverIntent.js"></script>
+      <script src="lib/superfish/superfish.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/venobox/venobox.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+      <!-- Contact Form JavaScript File -->
+      <script src="contactform/contactform.js"></script>
+    
+      <!-- Template Main Javascript File -->
+      <script src="js/main.js"></script>
+    </body>
+    
+    </html>

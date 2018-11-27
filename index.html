@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {margin:0;font-family:Arial}
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .active {
+          background-color: #4CAF50;
+          color: white;
+        }
+        
+        .topnav .icon {
+          display: none;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 17px;    
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .topnav a:hover, .dropdown:hover .dropbtn {
+          background-color: #555;
+          color: white;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+          }
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          .topnav.responsive .dropdown {float: none;}
+          .topnav.responsive .dropdown-content {position: relative;}
+          .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+        }
+        </style>
+  <meta charset="utf-8">
+  <title>ICIoT - International Conference on IoT</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 11, 2019 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "days : " + hours + "hrs : "
+        + minutes + "min : " + seconds + "sec";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+
+<style>
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  
+  .button2 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+      background-color: #008CBA;
+      color: white;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="index.html"><img src="img/logo.png" alt="" title="" style="height:70px; width:90px"><span>ICIoT-2019</span></a></h1>
+       
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">Committees</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="publications.html">Call For Papers</a></li>
+          <li><a href="index.html#venue">Venue</a></li>
+          <li><a href="register.html">Registration</a></li>        
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">ICIoT-2019<br>International Conference<br> on Internet of Things</h1>
+      <p class="mb-4 pb-0">March 11-15, 2019<br>SRM Institute of Science and Technology</p>
+      <p id="demo" style="color:#c69a15; background-color:white"></p>
+      <a href="schedule.html#important" class="about-btn scrollto"><b>Important Dates</b></a> <a href="publications.html#publications" class="about-btn scrollto"><b>Publications</b></a>
+      <i class="fa fa-caret-down" style="color:#c69a15; font-size: 50px;"></i>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 >About The Conference</h3>
+            <p align="justify">The Department of Computer Science and Engineering of SRM Institute of Science and Technology ,Chennai, India is planning to conduct an International Conference on Internet of Things (ICIoT 2019) from March 11th 2019 to March 15th 2019 in the Kattankulathur campus, Chennai. The conference aims to provide an outstanding opportunity for both academic and industrial communities to address new trends and challenges, emerging technologies and progress in standards on topics relevant to today’s fast moving areas of Internet of Things. It also provides a platform for the discussion of new results in the field of Internet of things.
+              The Conference will have different themes for each day and each theme contains different thought provoking sessions. The first two days will focus on IoT in Computer Science and Information Technology domains. The third day’s first track will focus on Civil, Mechanical and Automobile domains and the second track will focus on Electrical, Electronics, and Instrumentation domains. The fourth day is a showcase of the products by Startups and Entrepreneurs who will be sharing their success stories and their experience in implementing IoT in their respective fields. The final day will focus on Government initiatives like Digital India, Smart Cities, where in top bureaucrats from various departments will deliberate on the themes.  Researchers, Faculty, students and Practitioners will be presenting their findings and ideas during the Paper presentation session on all the five days.
+              </p>
+          
+          
+            <h3>About SRM</h3>
+            <p align="justify">SRM Institute of Science and Technology, Chennai, India is one of the top ranking Institution in India with over 38,000 students and 2,600 faculty members, offering a wide range of undergraduate, postgraduate and doctoral programs in Engineering, Management, Medicine and Health Sciences and Science and Humanities. It has established itself as a premier center for teaching, research and industrial consultancy in Indian sub-continent. It has world class infrastructure including smart classrooms, Hi-Tech labs, advanced research laboratories, modern library and Wi-Fi facility. Ministry of Human Resources Development has placed SRM Institute of Science and Technology in A++ category. The times of India has ranked SRM Institute of Science and Technology as No. 1 in top 75 private engineering Institutes. During January 2011, the Institution conducted the 98th Indian Science Congress where in 6 Nobel laureates interacted with our Students and Faculty.</p>
+          
+            <h3>About Computer Science and Engineering Department</h3>
+            <p align="justify">The Department of Computer Science and Engineering (CSE) is the largest in the SRM family with over 6000 students and 200 faculty members. The department offers eight Specializations in undergraduate B.Tech Programme apart from the regular Computer Science and Engineering, namely, Artificial Intelligence and Machine Learning , Big Data Analytics, Computer Networking, Internet of Things, Cloud Computing, Cyber Security, Information Technology and Software Engineering. The undergraduate B.Tech in Computer Science and Engineering Programme of Kattankulathur campus is accredited by the Institution of Engineering and Technology (IET), UK. </p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Event Speakers</h2>
+          <p>Distinguished speakers to the conference</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/1.jpg" alt="Speaker 1">
+              <div class="details">
+                <h3><a  >Dr. Prasanta Bhattacharya</a></h3>
+                <p>Research Scientist, A* Star, Singapore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/2.jpg" alt="Speaker 2">
+              <div class="details">
+                <h3><a  >Dr. S. Lakshmivarahan</a></h3>
+                <p>Research Professor, School of Computer Science, University of Oklahoma, US</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/3.jpg" alt="Speaker 3">
+              <div class="details">
+                <h3><a  >Dr. Hamil Al-Hamadi</a></h3>
+                <p>Assistant Professor, Kuwait University</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/4.jpg" alt="Speaker 4">
+              <div class="details">
+                <h3><a  >Dr. Andrei Raigorodskii</a></h3>
+                <p>Chair of the Dept of Discrete Mathematics, Faculty of Innovations and Advanced Technoogy, Russia</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/5.jpg" alt="Speaker 5">
+              <div class="details">
+                <h3><a  >Varadarajan Krishna</a></h3>
+                <p>Managing Director - Asia & MENA, 100 Open Startups</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/6.jpg" alt="Speaker 6">
+              <div class="details">
+                <h3><a  >Dr.B.L.Lakshmi Meera</a></h3>
+                <p>Program Director, FORGE Accelerator, Coimbatore</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/7.jpg" alt="Speaker 7">
+              <div class="details">
+                <h3><a  >Mr. Moshe Porat</a></h3>
+                <p>Founder & CEO Mesh Labs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/8.jpg" alt="Speaker 7">
+              <div class="details">
+                <h3><a>Dr. Yogesh Simmhan</a></h3>
+                <p>Assistant Professor, Department of Computational and Data Sciences (CDS), Indian Institute of Science (IISc), Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!--==========================
+      Venue Section
+    ============================-->
+    <section id="venue" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Event Venue</h2>
+          <p>Information related to the event venue</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <iframe src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=12.82342625,80.04580003768095&amp;q=SRM%20Institute%20of%20Science%20and%20Technology+(ICIoT)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>SRM IST, Chennai</h3>
+                <p style="text-align: justify;">SRM Institute of Science and Technology, Chennai, India is one of the top ranking Institution in India with over 38,000 students and 2,600 faculty members, offering a wide range of undergraduate, postgraduate and doctoral programs in Engineering, Management, Medicine and Health Sciences and Science and Humanities. It has established itself as a premier center for teaching, research and industrial consultancy in Indian sub-continent. It has world class infrastructure including smart classrooms, Hi-Tech labs, advanced research laboratories, modern library and Wi-Fi facility. Ministry of Human Resources Development has placed SRM Institute of Science and Technology in A++ category. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+          <div class="section-header">
+              <h2>How to Reach?</h2>
+              <p>Please follow the below mentioned directions according to your mode of transport.</p>
+            </div>
+          <div class="row no-gutters">
+            <div class="col-lg-12 venue-info">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-10">
+                <h3>By Airways</h3>
+                <p style="text-align: justify;">The nearest railway station from the Chennai Airport is Tirusulam, located just opposite the Airport. Get on a train towards Tambaram and follow the instructions given in the 'By Rail' section for reaching SRM Institute of Science and Technology (formerly known as SRM University).</p>
+                <br><h3>By Railways</h3>
+                <p style="text-align: justify;">Those coming from other states of India by train, should get down at the Chennai Central Station, come out and cross the high road through the pedestrian subway and reach 'Park' suburban metro rail station. Two destination trains are available from Park suburban metro rail station - to (i) Tambaram (TBM) (ii) Chengalpattu (CGL).<br>
+  
+                    (i) If you take the train to Tambaram, then get down at Tambaram and reach the local bus stand there. Take T60 or T60 LSS bus and get down at SRM or Potheri stop. It is a 20 minute travel from Tambaram to reach SRM Institute of Science and Technology (formerly known as SRM University). (Total Travel time from Chennai Central Railway Station will be around One Hour).<br>
+                    
+                    (ii) If you take the train to Chengalpattu, you can directly reach Potheri railway station. SRM Institute of Science and Technology (formerly known as SRM University) is just opposite to Potheri railway station.
+                  <br>
+                  <a href="img/srm_map_big.jpg" download>Click Here To Download Rail Map to SRM IST</a>
+                  </p>
+                    
+                  </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <!--==========================
+      Hotels Section
+    ============================-->
+    
+   
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="sponsors" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+        <div class="row no-gutters sponsors-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/sponsors/1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/sponsors/2.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/sponsors/3.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+        
+        </div>
+
+      </div>
+
+    </section>
+
+    
+ <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+          <a href="img/venue-gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/1.jpg" alt=""></a>
+          <a href="img/venue-gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/2.jpg" alt=""></a>
+          <a href="img/venue-gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/3.jpg" alt=""></a>
+          <a href="img/venue-gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/4.jpg" alt=""></a>
+          <a href="img/venue-gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/5.jpg" alt=""></a>
+          <a href="img/venue-gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/6.jpg" alt=""></a>
+          <a href="img/venue-gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/7.jpg" alt=""></a>
+          <a href="img/venue-gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/venue-gallery/8.jpg" alt=""></a>
+        <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg" alt=""></a>
+        <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg" alt=""></a>
+        <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg" alt=""></a>
+        <a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpg" alt=""></a>
+        <a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpg" alt=""></a>
+        <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg" alt=""></a>
+        <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg" alt=""></a>
+        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
+      </div>
+    </section>
+
+    
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Please check the following information to contact us</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>The Organising Secretary<br>
+                ICIoT- ‘19<br>
+                Department of CSE,<br>
+                SRMIST,<br>
+                Kattankulathur-603203</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Numbers</h3>
+              <p><a>
+                  Department of CSE: 044-274-17820<br>
+                Mrs. P. Visalakshi: +918667084728<br>
+Dr. G. Niranjana: +917667073160<br>
+
+              </a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">iciot.2019@ktr.srmuniv.ac.in</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Downloads</h4>
+                  <p><a href="img/Registartion_Form-ICIot-2019.docx" download>Registration Form</a><br>
+                    <a href="img/copyright_form-ICIOT2019.docx" download>Copyright Declaration Form</a></p>
+              </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Academia</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/">SRM IST</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="http://www.srmuniv.ac.in/engineering/department-of-computer-science-engineering/about-the-department">Computer Science Department</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="fa fa-angle-right"></i> <a href="schedule.html">Important Dates</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="schedule.html#faq">FAQs</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="publications.html#speakers">Publications</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="register.html#buy-tickets">Fee Section</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                  The Organising Secretary<br>
+                  ICIoT- ‘19<br>
+                  Department of CSE,<br>
+                  SRMIST,<br>
+                  Kattankulathur-603203<br>
+                <strong>Phone:</strong> 044-274-17820<br>
+                <strong>Email:</strong> iciot.2019@ktr.srmuniv.ac.in<br>
+              </p>
+  
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+  
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+  
+  </html>
